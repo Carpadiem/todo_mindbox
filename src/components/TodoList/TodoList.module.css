@@ -1,0 +1,22 @@
+.list {
+    padding: 20px;
+    border: 1px solid #242424;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+
+.showhideButton {
+    user-select: none;
+    color: #646464;
+    margin: 10px 0px;
+    width: auto;
+    text-align: start;
+    transition: all .15s ease;
+    cursor: pointer;
+}
+.showhideButton:hover {
+    color: white;
+}

@@ -1,5 +1,11 @@
 .box {
+    background-color: #1d1d1d;
+    padding: 10px 20px;
+    border-radius: 6px;
     cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .taskText {
@@ -11,4 +17,21 @@
 
 .taskText:hover {
     color: white;
+}
+
+.completingCircle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border:1px solid #969696;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doneCap {
+    width: 10px;
+    height: 10px;
+    background-color: #969696;
+    border-radius: 50%;
 }

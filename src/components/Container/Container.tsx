@@ -12,7 +12,10 @@ const Container = ({ children, width='default' }: ContainerProps) => {
       style={{
         // backgroundColor: 'blue',
         width: width === 'default' ? 1200 : width,
-        height: '100%'
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
       } as React.CSSProperties}
     >
       { children }

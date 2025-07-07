@@ -3,20 +3,22 @@ import styles from './TodoItem.module.css'
 
 
 interface TodoItemProps {
-  taskText: string
+  text: string
+  isDone?: boolean
+  onClick: ()=>void
 }
 
-const TodoItem = ({ taskText } : TodoItemProps) => {
+const TodoItem = ({ text, isDone=false, onClick } : TodoItemProps) => {
   return (
     <div
       className={styles.box}
-      style={{
-        padding: '10px 20px',
-        backgroundColor: '#1d1d1d',
-        borderRadius: 6,
-      } as React.CSSProperties}
+      style={{ opacity: isDone ? .3 : 1 }}
+      onClick={onClick}
     >
-      <p className={styles.taskText}>{ taskText }</p>
+      <div className={styles.completingCircle}>
+        { isDone && <div className={styles.doneCap} /> }
+      </div>
+      <p className={styles.taskText}>{ text }</p>
     </div>
   )
 }

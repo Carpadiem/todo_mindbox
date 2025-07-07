@@ -1,25 +1,36 @@
 import React from 'react'
-
+import styles from './TodoList.module.css'
 
 
 interface TodoListProps {
   children: React.ReactNode
+  size?: 'mini' | 'standard'
 }
 
-const TodoList = ({ children }: TodoListProps) => {
+const TodoList = ({ size, children }: TodoListProps) => {
+  
+  // states
+  const [isShowTasks, setIsShowTasks] = React.useState<boolean>(true)
+
+  // effects
+
+  // handlers
+  const showhideTasksHandler = () => {
+    setIsShowTasks(prev => !prev)
+  }
+
+  // render
   return (
-    <div
-      style={{
-        padding: '20px 20px',
-        border: '1px solid #242424',
-        borderRadius: 6,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 5
-      } as React.CSSProperties}
-    >
-      { children }
+    <>
+    <div className={styles.list} style={{width: size === 'mini' ? 400 : 800}}>
+
+      <a className={styles.showhideButton} onClick={showhideTasksHandler}>
+        {isShowTasks ? 'Скрыть' : 'Показать'}
+      </a>
+
+      {isShowTasks ? children : null}
     </div>
+    </>
   )
 }
 

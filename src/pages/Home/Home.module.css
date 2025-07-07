@@ -14,13 +14,53 @@
     /* background-color: red; */
     margin-bottom: 20px;
     display: flex;
-    gap: 10px
+    gap: 10px;
+    height: 50px;
 }
 
 .newTaskInput {
-    flex-grow: 1;
+    width: 400px;
+    height: 100%;
 }
 
 .buttonCreate {
     width: 150px;
+    height: 100%;
+}
+
+.infoPanel {
+    position: absolute;
+    bottom: 40px;
+
+    scale: 1.1;
+
+    padding: 12px 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    background-color: #1e1e1e;
+
+    margin-top: 30px;
+}
+
+.filterContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.filterButton {
+    text-decoration: none;
+    padding: 4px 8px;
+    border: 1px solid #424242;
+    border-radius: 6px;
+    color: #969696;
+    font-size: 14px;
+    transition: all .15s ease;
+    user-select: none;
+    cursor: pointer;
+}
+.filterButton:hover {
+    color: white;
 }
