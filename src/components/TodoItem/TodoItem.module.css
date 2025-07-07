@@ -1,0 +1,14 @@
+.box {
+    cursor: pointer;
+}
+
+.taskText {
+    /* background-color: red; */
+    user-select: none;
+    color: #969696;
+    transition: all .15s ease;
+}
+
+.taskText:hover {
+    color: white;
+}
